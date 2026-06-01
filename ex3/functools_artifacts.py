@@ -55,6 +55,7 @@ def spell_dispatcher() -> Callable[[Any], str]:
 
     return dispatch
 
+
 if __name__ == "__main__":
 
     print("=== Spell Reducer ===")

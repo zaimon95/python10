@@ -40,6 +40,7 @@ def memory_vault() -> dict[str, Callable]:
 
     return {"store": store, "recall": recall}
 
+
 if __name__ == "__main__":
 
     print("=== Mage Counter ===")

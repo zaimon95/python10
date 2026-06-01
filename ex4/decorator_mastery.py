@@ -51,9 +51,8 @@ class MageGuild:
     def cast_spell(self, power: int, spell_name: str) -> str:
         return f"Successfully cast {spell_name} with {power} power"
 
-if __name__ == "__main__":
 
-    import time
+if __name__ == "__main__":
 
     @spell_timer
     def fireball():

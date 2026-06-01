@@ -26,6 +26,7 @@ def spell_sequence(spells: list[Callable]) -> Callable:
         return [spell(target, power) for spell in spells]
     return sequence
 
+
 if __name__ == "__main__":
 
     def fireball(target: str, power: int) -> str:
