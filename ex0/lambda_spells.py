@@ -17,3 +17,32 @@ def mage_stats(mages: list[dict]) -> dict:
         "min_power": min(powers),
         "avg_power": round(sum(powers) / len(powers), 2)
     }
+
+
+if __name__ == "__main__":
+
+    artifacts = [
+        {"name": "Crystal Orb", "power": 85, "type": "orb"},
+        {"name": "Fire Staff", "power": 92, "type": "staff"},
+        {"name": "Ice Wand", "power": 78, "type": "wand"},
+    ]
+
+    mages = [
+        {"name": "Merlin", "power": 100, "element": "fire"},
+        {"name": "Gandalf", "power": 80, "element": "light"},
+        {"name": "Morgana", "power": 60, "element": "shadow"},
+    ]
+
+    spells = ["fireball", "heal", "shield"]
+
+    print("=== Artifact Sorter ===")
+    print(artifact_sorter(artifacts))
+
+    print("\n=== Power Filter ===")
+    print(power_filter(mages, 75))
+
+    print("\n=== Spell Transformer ===")
+    print(spell_transformer(spells))
+
+    print("\n=== Mage Stats ===")
+    print(mage_stats(mages))

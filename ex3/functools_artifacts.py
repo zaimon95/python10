@@ -54,3 +54,39 @@ def spell_dispatcher() -> Callable[[Any], str]:
         return f"Multi-cast: {len(arg)} spells"
 
     return dispatch
+
+if __name__ == "__main__":
+
+    print("=== Spell Reducer ===")
+
+    spells = [10, 20, 30, 40]
+
+    print(f"Sum: {spell_reducer(spells, "add")}")
+    print(f"Product: {spell_reducer(spells, "multiply")}")
+    print(f"Max: {spell_reducer(spells, "max")}")
+    print(f"Min: {spell_reducer(spells, "min")}")
+
+    print("\n=== Partial Enchanter ===")
+
+    def enchant(power: int, element: str, target: str) -> str:
+        return f"{element} enchantment ({power}) on {target}"
+
+    enchantments = partial_enchanter(enchant)
+
+    print(enchantments["fire"]("Sword"))
+    print(enchantments["ice"]("Shield"))
+    print(enchantments["lightning"]("Hammer"))
+
+    print("\n=== Fibonacci ===")
+
+    print(f"Fib(10): {memoized_fibonacci(10)}")
+    print(f"Fib(15): {memoized_fibonacci(15)}")
+
+    print("\n=== Spell Dispatcher ===")
+
+    dispatcher = spell_dispatcher()
+
+    print(dispatcher(50))
+    print(dispatcher("fireball"))
+    print(dispatcher(["fireball", "heal"]))
+    print(dispatcher({"unknown": True}))
