@@ -3,8 +3,8 @@ import operator
 from typing import Any, Callable
 
 
-def spell_reducer(spells: list[int], operation: str) -> int:
-    if not spells:
+def spell_reducer(spell_list: list[int], operation: str) -> int:
+    if not spell_list:
         return 0
 
     ops: dict[str, Callable] = {
@@ -17,7 +17,7 @@ def spell_reducer(spells: list[int], operation: str) -> int:
     if operation not in ops:
         raise ValueError("Unknown operation")
 
-    return reduce(ops[operation], spells)
+    return reduce(ops[operation], spell_list)
 
 
 def partial_enchanter(base_enchantment: Callable) -> dict[str, Callable]:
