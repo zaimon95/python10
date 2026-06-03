@@ -7,7 +7,7 @@ def spell_reducer(spells: list[int], operation: str) -> int:
     if not spells:
         return 0
 
-    ops = {
+    ops: dict[str, Callable] = {
         "add": operator.add,
         "multiply": operator.mul,
         "max": max,
