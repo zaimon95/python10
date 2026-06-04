@@ -11,7 +11,7 @@ def spell_reducer(spell_list: list[int], operation: str) -> int:
         "add": operator.add,
         "multiply": operator.mul,
         "max": max,
-        "min": min
+        "min": min,
     }
 
     if operation not in ops:
@@ -57,15 +57,14 @@ def spell_dispatcher() -> Callable[[Any], str]:
 
 
 if __name__ == "__main__":
-
     print("=== Spell Reducer ===")
 
     spells = [10, 20, 30, 40]
 
-    print(f"Sum: {spell_reducer(spells, "add")}")
-    print(f"Product: {spell_reducer(spells, "multiply")}")
-    print(f"Max: {spell_reducer(spells, "max")}")
-    print(f"Min: {spell_reducer(spells, "min")}")
+    print(f"Sum: {spell_reducer(spells, 'add')}")
+    print(f"Product: {spell_reducer(spells, 'multiply')}")
+    print(f"Max: {spell_reducer(spells, 'max')}")
+    print(f"Min: {spell_reducer(spells, 'min')}")
 
     print("\n=== Partial Enchanter ===")
 

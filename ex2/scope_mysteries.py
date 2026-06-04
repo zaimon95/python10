@@ -26,6 +26,7 @@ def spell_accumulator(initial_power: int) -> Callable:
 def enchantment_factory(enchantment_type: str) -> Callable:
     def enchant(item: str):
         return f"{enchantment_type} {item}"
+
     return enchant
 
 
@@ -42,7 +43,6 @@ def memory_vault() -> dict[str, Callable]:
 
 
 if __name__ == "__main__":
-
     print("=== Mage Counter ===")
 
     counter_a = mage_counter()
@@ -76,5 +76,5 @@ if __name__ == "__main__":
 
     vault["store"]("secret", 42)
 
-    print(f"Recall 'secret': {vault["recall"]("secret")}")
-    print(f"Recall 'unknown': {vault["recall"]("unknown")}")
+    print(f"Recall 'secret': {vault['recall']('secret')}")
+    print(f"Recall 'unknown': {vault['recall']('unknown')}")
